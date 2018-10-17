@@ -12,13 +12,13 @@ inputs:
     type: string
     description: >
       IP address of PRIVATE host
-    default: '192.168.20.6'
+    default: '192.168.113.3'
 
   portforward_port:
     type: string
     description: >
       Port on which service is going to be exposed
-    default: '55555'
+    default: '5555'
 
   baseline-blueprint-name:
     type: string
