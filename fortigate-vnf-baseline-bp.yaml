@@ -215,7 +215,7 @@ node_templates:
     properties:
       openstack_config: *openstack_config
       use_external_resource: true
-      resource_id: private_subnet
+      resource_id: { get_secret: private_subnet_name}
     relationships:
     - target: private_network
       type: cloudify.relationships.contained_in
@@ -225,7 +225,7 @@ node_templates:
     properties:
       openstack_config: *openstack_config
       use_external_resource: true
-      resource_id: private_network
+      resource_id: { get_secret: private_network_name}
 
   security_group:
     type: cloudify.openstack.nodes.SecurityGroup
